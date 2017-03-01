@@ -30,18 +30,4 @@ public class xlTable extends Table{
 		return index;
 	}
 
-	public static void main(String[] args){
-		xlTable t1 = new xlTable(10);
-		
-		System.out.println(t1.timeSlots);
-		System.out.println(t1.bookxlTable(11, (float)12.5));
-		System.out.println(t1.bookxlTable(10, (float)12.5));
-		System.out.println(t1.bookxlTable(13, (float)15.5));
-		System.out.println(t1.bookxlTable(15, (float)16.5));
-		System.out.println(t1.bookxlTable((float)17.5, 20));
-		System.out.println(t1.bookxlTable((float)18.5, 19));
-		System.out.println(t1.bookxlTable(22, 24));
-		System.out.println(t1.bookxlTable(14, 16));
-		System.out.println(t1.bookxlTable(11, 13));
-	}
 }
