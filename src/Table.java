@@ -60,19 +60,8 @@ public class Table {
 		return bookable;
 	}
 	
-	public static void main(String[] args){
-		Table t1 = new Table(10);
-		
-		System.out.println(t1.timeSlots);
-		System.out.println(t1.bookTable(11));
-		System.out.println(t1.bookTable(10));
-		System.out.println(t1.bookTable(13));
-		System.out.println(t1.bookTable(15));
-		System.out.println(t1.bookTable((float)17.5));
-		System.out.println(t1.bookTable((float)18.5));
-		System.out.println(t1.bookTable(22));
-		System.out.println(t1.bookTable(14));
-		System.out.println(t1.bookTable(11));
+	public int getSeats(){
+		return this.numOfSeats;
 	}
 	
 }
