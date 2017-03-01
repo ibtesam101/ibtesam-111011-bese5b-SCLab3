@@ -69,16 +69,4 @@ public class Restaurant {
 		return reserved;
 	}
 	
-	public static void main(String[] args){
-		Restaurant r1 = new Restaurant();
-		
-		for(int i = 0; i < 16; i++)
-			System.out.println(r1.reserve(2, 11));
-		
-		System.out.println(r1.reserve(4, 14));
-		System.out.println(r1.reserve(4, 11));
-		System.out.println(r1.reserve(5, 13));
-		System.out.println(r1.reserveXL(12, 16));
-	}
-	
 }
