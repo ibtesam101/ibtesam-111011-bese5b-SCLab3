@@ -5,7 +5,9 @@ public class Table {
 
 	int numOfSeats;
 	
-	int bookStartTime;
+	float bookStartTime;
+	
+	String guestName;
 	
 	List<Float> timeSlots;
 	
@@ -22,8 +24,13 @@ public class Table {
 		
 	}
 	
-	public boolean bookTable(float time){
+	public boolean bookTable(float time, String guest){
 		boolean book = false;
+		
+		this.bookStartTime = time;
+		
+		this.guestName = guest;
+		
 		for(int i=0; i<timeSlots.size(); i++){
 			if(time == timeSlots.get(i)){
 				book = bookable(i, i+8, time, time+2);

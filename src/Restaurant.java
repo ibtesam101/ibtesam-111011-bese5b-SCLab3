@@ -26,12 +26,12 @@ public class Restaurant {
 		}
 	}
 	
-	public boolean reserve(int seats, float time){
+	public boolean reserve(int seats, float time, String guest){
 		boolean reserved = false;
 		
 		if(seats <= 2){
 			for(int i=0; i < stableList.size(); i++){
-				if(stableList.get(i).bookTable(time)){
+				if(stableList.get(i).bookTable(time, guest)){
 					reserved = true;
 					break;
 				}
@@ -40,7 +40,7 @@ public class Restaurant {
 		
 		if(seats <= 4 && !reserved){
 			for(int i=0; i < mtableList.size(); i++){
-				if(mtableList.get(i).bookTable(time)){
+				if(mtableList.get(i).bookTable(time, guest)){
 					reserved = true;
 					break;
 				}
@@ -49,7 +49,7 @@ public class Restaurant {
 		
 		if(seats <= 6 && !reserved){
 			for(int i=0; i < ltableList.size(); i++){
-				if(ltableList.get(i).bookTable(time)){
+				if(ltableList.get(i).bookTable(time, guest)){
 					reserved = true;
 					break;
 				}
