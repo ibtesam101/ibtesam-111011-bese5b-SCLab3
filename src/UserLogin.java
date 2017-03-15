@@ -54,6 +54,8 @@ public class UserLogin {
 			e.printStackTrace();
 		}
 	    
+	    
+	    
 	    if(!rs.next()){
 		    rs.close();
 		    stmt.close();
@@ -99,6 +101,16 @@ public class UserLogin {
 	    
 	    try {
 			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    String sql2;
+	    sql2 = "INSERT INTO log(userName) values('"+username+
+	    		"');";
+	    
+	    try {
+			stmt.executeUpdate(sql2);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
